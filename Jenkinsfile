@@ -1,12 +1,12 @@
 pipeline {
   agent any
-  //requires "parameterized-trigger" installed on Jenkins
+  //requires "parameterized-trigger" plug-in installed on Jenkins
   parameters {
     // choices are a string of newline separated values
     // https://issues.jenkins-ci.org/browse/JENKINS-41180
     choice( choices: 'Enabled\nDisabled', description: 'Enter the new desired status', name: 'REQUESTED_ACTION')
+    string( defaultValue: 'jenkins', description: 'Enter the Traffic Manager resource group', name: 'AZURE_TM_RESOURCE_GROUP_NAME')
     string( defaultValue: 'jenkinsapp', description: 'Enter the Traffic Manager name', name: 'AZURE_TM_NAME')
-    booleanParam(name: 'DEBUG_BUILD', defaultValue: true, description: '')
   }
   stages {
     stage('login') {
