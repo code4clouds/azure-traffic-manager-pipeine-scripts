@@ -16,6 +16,9 @@ pipeline {
         sh 'az account set -s $AZURE_SUBSCRIPTION_ID'
         sh 'az resource list'
       }
+      steps {
+        sh 'sh tmscript.sh'
+      }
     }
   }
 
