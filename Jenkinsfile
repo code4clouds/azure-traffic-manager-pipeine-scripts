@@ -8,12 +8,6 @@ pipeline {
         choices: 'Enabled\nDisabled',
         description: 'Enter the new desired status',
         name: 'REQUESTED_ACTION')
-    choice(
-        // choices are a string of newline separated values
-        // https://issues.jenkins-ci.org/browse/JENKINS-41180
-        choices: 'Enabled\nDisabled',
-        description: 'Enter the new desired status',
-        name: 'REQUESTED_ACTION1')
     string(
         // choices are a string of newline separated values
         // https://issues.jenkins-ci.org/browse/JENKINS-41180
