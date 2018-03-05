@@ -11,7 +11,7 @@ pipeline {
   }
   stages {
     stage('login') {
-      withCredentials([azureServicePrincipal('principal-credentials-id')]) {
+      withCredentials([azureServicePrincipal('azsp4tm')]) {
         sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
         sh 'az account set -s $AZURE_SUBSCRIPTION_ID'
         sh 'az resource list'
