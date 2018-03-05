@@ -2,7 +2,7 @@ pipeline {
   agent any
   parameters {
     // requires "parameterized-trigger" installed on Jenkins
-    choice(
+    [choice(
         // choices are a string of newline separated values
         // https://issues.jenkins-ci.org/browse/JENKINS-41180
         choices: 'Enabled\nDisabled',
@@ -19,7 +19,7 @@ pipeline {
         // https://issues.jenkins-ci.org/browse/JENKINS-41180
         value: 'jenkinsapp',
         description: 'Enter the Traffic Manager name',
-        name: 'AZURE_TM_NAME')
+        name: 'AZURE_TM_NAME')]
   }
   stages {
     stage('login') {
