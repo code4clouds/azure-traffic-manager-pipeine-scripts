@@ -7,11 +7,11 @@ pipeline {
         // https://issues.jenkins-ci.org/browse/JENKINS-41180
         choices: 'Enabled\nDisabled',
         description: 'Enter the new desired status',
-        name: 'REQUESTED_ACTION')
+        name: 'REQUESTED_ACTION'),
     string(
         defaultValue: 'jenkinsapp',
         description: 'Enter the Traffic Manager name',
-        name: 'AZURE_TM_NAME')
+        name: 'AZURE_TM_NAME'),
     booleanParam(name: 'DEBUG_BUILD', defaultValue: true, description: '')
   }
   stages {
