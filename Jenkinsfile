@@ -35,7 +35,7 @@ pipeline {
       steps {
         withCredentials([azureServicePrincipal('azsp4tm')]) {
           // Check if there are at least 2 endpoints available to disable.  The idea is to not perform any operation is one endpoint to avoid traffic disruption
-          sh 'if [ $((`az network traffic-manager endpoint list --profile-name $AZURE_TM_NAME --resource-group $AZURE_TM_RESOURCE_GROUP_NAME | jq 'map(select(\.endpointStatus == "Enabled")) | length'`)) -ge 2 ] 
+          sh 'if [ $((`az network traffic-manager endpoint list --profile-name $AZURE_TM_NAME --resource-group $AZURE_TM_RESOURCE_GROUP_NAME | jq \'map(select(.endpointStatus == "Enabled")) | length\'`)) -ge 2 ] 
               then az network traffic-manager endpoint update --name $ENDPOINT_NAME --profile-name $AZURE_TM_NAME --resource-group $AZURE_TM_RESOURCE_GROUP_NAME --type azureEndpoints --endpoint-status $ENDPOINT_STATUS 
               else echo "SAFETY ERROR: Unable to remove endpoint as there is only one left and will cause traffic disruption" 1>&2 
               fi'
