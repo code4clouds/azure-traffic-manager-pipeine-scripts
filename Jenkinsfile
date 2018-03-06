@@ -34,7 +34,7 @@ pipeline {
       }
       steps {
         withCredentials([azureServicePrincipal('azsp4tm')]) {
-          sh 'apt install jq'
+          sh 'sudo apt install jq'
           // Extract the number of endpoints that are enabled.
           sh 'export TME_COUNT=`az network traffic-manager endpoint list --profile-name $AZURE_TM_NAME --resource-group $AZURE_TM_RESOURCE_GROUP_NAME | jq \'map(select(.endpointStatus == "Enabled")) | length\'`'
           // Check if there are at least 2 endpoints available to disable.  The idea is to not perform any operation is one endpoint to avoid traffic disruption
