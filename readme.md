@@ -27,10 +27,10 @@ This script was create to manage an Azure Traffic Manager using the Jenkin's Blu
 
 ![alt Jenkins build](images/jbuild.png)
 
-1. Enter the parameters
+2. Enter the parameters
 
-![alt Jenkins build](images/jparameter.png)
+![alt Jenkins build](images/jparemeter.png)
 
-1. Watch the pipeline do its job.
+3. Watch the pipeline do its job.
 
 ![alt Jenkins build](images/jbuild.png)
