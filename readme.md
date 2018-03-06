@@ -6,12 +6,24 @@ This script was create to manage an Azure Traffic Manager using the Jenkin's Blu
 
 ## Requirements
 
-- [Jenkins](https://jenkins.io/) (optionally hosted on [Azure](https://azure.microsoft.com/en-us/blog/jenkins-on-azure-from-zero-to-hero/))
+- [Jenkins](https://jenkins.io/)
 - Jenkins [Blue Ocean Plug-In](https://plugins.jenkins.io/blueocean) Plug-In
 - Jenkins [Parameter-Trigger](https://plugins.jenkins.io/parameterized-trigger) Plug-In
 - Jenkins [Azure Crendentials](https://plugins.jenkins.io/azure-credentials) Plug-In
 
 ## Setup
+
+1. Install Jenkins (optionally useh a hosted one in [Azure](https://azure.microsoft.com/en-us/blog/jenkins-on-azure-from-zero-to-hero/))
+
+``` bash
+apt install jenkins
+```
+
+1. Install jq
+
+``` bash
+apt install jq
+```
 
 1. Install the required plug-ins.
 1. Create an [Azure Service Principal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key) for the pipeline.
