@@ -25,12 +25,12 @@ This script was create to manage an Azure Traffic Manager using the Jenkin's Blu
 
 1. Using the Jenkins  classic view, launch the parameterized build. (do not using BO as of now it only shows one parameter)
 
-![alt Jenkins build][images/jbuild.png]
+![alt Jenkins build](images/jbuild.png)
 
 1. Enter the parameters
 
-![alt Jenkins build][images/jparameter.png]
+![alt Jenkins build](images/jparameter.png)
 
 1. Watch the pipeline do its job.
 
-![alt Jenkins build][images/jbuild.png]
+![alt Jenkins build](images/jbuild.png)
