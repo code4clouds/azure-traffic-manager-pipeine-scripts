@@ -41,8 +41,8 @@ apt install jq
 
 2. Enter the parameters
 
-![alt Jenkins build](images/jparemeter.png)
+![alt Jenkins parameter](images/jparemeter.png)
 
 3. Watch the pipeline do its job.
 
-![alt Jenkins build](images/jbuild.png)
+![alt Jenkins pipeline](images/jpipeline.png)
