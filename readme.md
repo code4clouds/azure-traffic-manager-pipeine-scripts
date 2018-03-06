@@ -16,13 +16,13 @@ This script was create to manage an Azure Traffic Manager using the Jenkin's Blu
 1. Install Jenkins (optionally useh a hosted one in [Azure](https://azure.microsoft.com/en-us/blog/jenkins-on-azure-from-zero-to-hero/))
 
 ``` bash
-apt install jenkins
+# apt install jenkins
 ```
 
 1. Install jq
 
 ``` bash
-apt install jq
+# apt install jq
 ```
 
 1. Install the required plug-ins.
