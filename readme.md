@@ -2,7 +2,7 @@
 
 ## Description
 
-This script was create to manage an Azure Traffic Manager using the Jenkin's Blue Ocean plug-iin.   The idea is to be able to enable/disable the TM, but also to add/remove endpoints.
+This script was create to manage an Azure Traffic Manager using the Jenkin's Blue Ocean plug-iin.   The idea is to be able to enable/disable the TM, but also to enable/disable endpoints.  There is also a check to make sure you dont disable your last active endpoint.
 
 ## Requirements
 
