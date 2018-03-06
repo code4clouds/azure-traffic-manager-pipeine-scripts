@@ -17,7 +17,19 @@ pipeline {
           sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
           sh 'az account set -s $AZURE_SUBSCRIPTION_ID'
           sh 'az resource list'
+        }
+      }
+    }
+    stage('Update TM') {
+      steps {
+        withCredentials([azureServicePrincipal('azsp4tm')]) {
           sh 'az network traffic-manager profile update --name $AZURE_TM_NAME --resource-group $AZURE_TM_RESOURCE_GROUP_NAME --status $TM_STATUS'
+        }
+      }
+    }
+    stage('Update EndPoint') {
+      steps {
+        withCredentials([azureServicePrincipal('azsp4tm')]) {
           sh 'az network traffic-manager endpoint update --name $ENDPOINT_NAME --profile-name $AZURE_TM_NAME --resource-group $AZURE_TM_RESOURCE_GROUP_NAME --type azureEndpoints --endpoint-status $ENDPOINT_STATUS'
         }
       }
