@@ -6,10 +6,10 @@ This script was create to manage an Azure Traffic Manager using the Jenkin's Blu
 
 ## Requirements
 
-- Jenkins
-- Jenkins Blue Ocean Plug-In
-- Jenkins Parameter-Trigger
-- Jenkins Azure Crendentials Plug-In
+- [Jenkins](https://jenkins.io/) (optionally hosted on [Azure](https://azure.microsoft.com/en-us/blog/jenkins-on-azure-from-zero-to-hero/))
+- Jenkins [Blue Ocean Plug-In](https://plugins.jenkins.io/blueocean) Plug-In
+- Jenkins [Parameter-Trigger](https://plugins.jenkins.io/parameterized-trigger) Plug-In
+- Jenkins [Azure Crendentials](https://plugins.jenkins.io/azure-credentials) Plug-In
 
 ## Setup
 
